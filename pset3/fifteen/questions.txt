@@ -1,0 +1,4 @@
+0. Minimum game board dimensions are 3x3 and maximum 9x9, as defined with DIM_MIN and DIM_MAX
+1. Game board structure is two-dimensional array
+2. Function greet is called at start of the game
+3. Functions init, draw, move and won need to be implemented

@@ -1,0 +1,12 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is a longest word in English language to be published in dictionary. It has 45 letters
+1.  getrusage returns resource usage measure for process chosen in function call.
+2.  Returned data type, struct rusage, contains 16 members
+3.  structs before and after are passed as pointers so that function calculate always has access to latest data. And it also keeps us from having to create new variables
+4.  First for loop is responsible for getting one character at the time from input text file. It reads character until it reaches end of file.
+    Inside there are few conditionals:
+        -First it is checked if current character is alphanumeric or apostrophe. Apostrophe cannot be first character in a word. If word read from input file is longer than 45 characters, it is ignored.
+        -After that character it is checked if character is a number. If it is, that word is ignored.
+        -If two previous conditions fail, that means current character is not a letter, apostrophe or a number, so it is most likely a space. That indicates end of current word.
+    When words is considered terminated it is sent to function check. If it is misspelled it gets printed and counter of misspelled words is incremented.
+5.  fgetc gives us more control over reading from input file. Each character can be individually tested
+6.  Parameters for check and load are declared as constants so they can't be accidentaly changed/

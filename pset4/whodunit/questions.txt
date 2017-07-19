@@ -1,0 +1,16 @@
+
+1.  stdint.h is a header file that defines data types with specific sizes/widths, and macro functions to allow creation of variables with these types.
+2.  Benefits of using fixed with variables in a programs is that variable size doesn't depend on machine or different operating system implementation.
+3.  BYTE is of type uint8_t, which has 8 bits or 1 byte.
+    DWORD has type of uint32_t, which has 32 bits or 4 bytes.
+    LONG is signed 32 bit integer, int32_t
+    WORD is type uint16_t, which is unsigned 16 bit integer
+4.  First two bytes in BMP file must be 0x42 and 0x4D, which stands for "BM" in ASCII. BM tells us that file follow Windows BMP specification.
+5.  bfSize stores size of entire BMP file, and biSize stores only size of BMP image or only size of RGBTRIPLEs wihout headers
+6.  If biHeight is negative that means the bitmap is top-down and origin is upper left corner.
+7.  field biBitCount specifies number of bits that define each pixel and maximum number of colors in that bitmap.
+8.  fopen will return NULL if specified file cannot be found.
+9.  Third argument to fread is nmemb. It specifies number of things to read
+10. Padding will be 3, because 3 pixels in in line * 3 bytes per pixel is equal to 9. 9 is not a multiple of 4, so scaline needs to be padded with zeroes to reach length that is multiple of 4, in this case 12.
+11. Fseek changes current position of file pointer by a certain offset.
+12. SEEK_CUR represents current location of pointer. It is used to offset cursor relative to current position.
